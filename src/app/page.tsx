@@ -7,21 +7,24 @@ import HeroSection from "@/components/HeroSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import type { Section } from "@/types";
 import React, { useState } from "react";
+import { Language } from "@/types";
 
 export default function Home() {
 	const [section, setSection] = useState<Section>("home");
+	const [language, setLanguage] = useState<Language>('ja');
+	
 
 	return (
 		<div className="bg-body font-poppins">
-			<Header setSection={setSection} currentSection={section} />
+			<Header setSection={setSection} currentSection={section} setLanguage={setLanguage} language={language} />
 			<main className="flex flex-col items-center">
 				<div className="w-full max-w-6xl">
-					{section === "home" && <HeroSection setSection={setSection} />}
-					{section === "skill" && <EngineerSection setSection={setSection} />}
-					{section === "portfolio" && <PortfolioSection />}
+					{section === "home" && <HeroSection setSection={setSection} language={language} />}
+					{section === "skill" && <EngineerSection setSection={setSection} language={language} />}
+					{section === "portfolio" && <PortfolioSection language={language} />}
 				</div>
 			</main>
-			<Footer />
+			<Footer language={language} />
 		</div>
 	);
 }
