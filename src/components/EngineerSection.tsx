@@ -20,14 +20,16 @@ export interface Engineer {
 	};
 }
 
+const currentYear = new Date().getFullYear();
+
 const engineers: Engineer[] = [
 	{
 		engineerName: {
 			ja: "Web系エンジニア",
 			en: "Web Engineer"
 		},
-		years: 10,
-		span: [2014, 2024],
+		years: currentYear - 2014,
+		span: [2014, currentYear],
 		icon: "RubyIcon",
 		badges: [
 			"Ruby",
@@ -42,6 +44,8 @@ const engineers: Engineer[] = [
 			"Cucumber",
 			"PHP",
 			"Symphony2",
+			"Python",
+			"Flask",
 		],
 		description: {
 			ja: "Ruby on Railsを中心に、迅速な改善策の提案が得意です。最近ではフロントエンドにも力を入れて世界を見ざしています。",
@@ -98,9 +102,10 @@ interface Props {
 
 const EngineerSection: React.FC<Props> = ({ setSection, language }) => {
 	const sectionTitle = language === "ja" ? "ITエンジニア歴" : "IT Engineer History";
+	const webYears = currentYear - 2014;
 	const sectionParagraph = language === "ja" 
-		? "私はWeb系エンジニアを10年、システムエンジニアを12年、組込エンジニアを8年経験しています。フリーランス歴は5年、正社員歴は25年です。" 
-		: "I have 10 years of experience as a Web engineer, 12 years as a system engineer, and 8 years as an embedded engineer. I have 5 years of freelancing experience and 25 years as a full-time employee.";
+		? `私はWeb系エンジニアを${webYears}年、システムエンジニアを12年、組込エンジニアを8年経験しています。フリーランス歴は5年、正社員歴は25年です。`
+		: `I have ${webYears} years of experience as a Web engineer, 12 years as a system engineer, and 8 years as an embedded engineer. I have 5 years of freelancing experience and 25 years as a full-time employee.`;
 	const buttonText = language === "ja" ? "もっと見る" : "See More";
 
 	return (
