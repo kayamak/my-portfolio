@@ -103,9 +103,10 @@ interface Props {
 const EngineerSection: React.FC<Props> = ({ setSection, language }) => {
 	const sectionTitle = language === "ja" ? "ITエンジニア歴" : "IT Engineer History";
 	const webYears = currentYear - 2014;
+	const freelancingYears = currentYear - 2019;
 	const sectionParagraph = language === "ja" 
-		? `私はWeb系エンジニアを${webYears}年、システムエンジニアを12年、組込エンジニアを8年経験しています。フリーランス歴は5年、正社員歴は25年です。`
-		: `I have ${webYears} years of experience as a Web engineer, 12 years as a system engineer, and 8 years as an embedded engineer. I have 5 years of freelancing experience and 25 years as a full-time employee.`;
+		? `私はWeb系エンジニアを${webYears}年、システムエンジニアを12年、組込エンジニアを8年経験しています。フリーランス歴は${freelancingYears}年、正社員歴は25年です。`
+		: `I have ${webYears} years of experience as a Web engineer, 12 years as a system engineer, and 8 years as an embedded engineer. I have ${freelancingYears} years of freelancing experience and 25 years as a full-time employee.`;
 	const buttonText = language === "ja" ? "もっと見る" : "See More";
 
 	return (
