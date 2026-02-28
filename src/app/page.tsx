@@ -4,6 +4,7 @@ import EngineerSection from "@/components/EngineerSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import PersonalSection from "@/components/PersonalSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import type { Section } from "@/types";
 import React, { useState } from "react";
@@ -21,6 +22,7 @@ export default function Home() {
 				<div className="w-full max-w-6xl">
 					{section === "home" && <HeroSection setSection={setSection} language={language} />}
 					{section === "skill" && <EngineerSection setSection={setSection} language={language} />}
+					{section === "personal" && <PersonalSection language={language} />}
 					{section === "portfolio" && <PortfolioSection language={language} />}
 				</div>
 			</main>

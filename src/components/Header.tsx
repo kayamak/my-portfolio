@@ -40,12 +40,14 @@ const Header: React.FC<Props> = ({ setSection, currentSection, setLanguage, lang
     const menuItems = language === 'ja' ? [
         { section: "home", label: "ホーム" },
         { section: "skill", label: "ITエンジニア歴" },
+        { section: "personal", label: "個人開発" },
         { section: "portfolio", label: "自作ライブラリ" },
         { section: "contact", label: "お問い合わせ" },
 				{ section: "translation", label: "English" },
     ] : [
         { section: "home", label: "Home" },
         { section: "skill", label: "IT Experience" },
+        { section: "personal", label: "Personal Projects" },
         { section: "portfolio", label: "Custom Library" },
         { section: "translation", label: "日本語" },
     ];
