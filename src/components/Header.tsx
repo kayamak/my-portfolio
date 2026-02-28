@@ -42,8 +42,7 @@ const Header: React.FC<Props> = ({ setSection, currentSection, setLanguage, lang
         { section: "skill", label: "ITエンジニア歴" },
         { section: "personal", label: "個人開発" },
         { section: "portfolio", label: "自作ライブラリ" },
-        { section: "contact", label: "お問い合わせ" },
-				{ section: "translation", label: "English" },
+		{ section: "translation", label: "English" },
     ] : [
         { section: "home", label: "Home" },
         { section: "skill", label: "IT Experience" },
