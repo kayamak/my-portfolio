@@ -28,8 +28,8 @@ const projects: Project[] = [
 	{
 		title: "GRID９ ENGLISH",
 		titleEn: "GRID9 ENGLISH",
-		description: "Cloudflare Workers + D1 のエッジ環境上に構築した英語学習フルスタックアプリ。",
-		descriptionEn: "A full-stack English learning app built on Cloudflare Workers + D1 edge environment.",
+		description: "Cloudflare Workers + D1 のエッジ環境上に構築した英文作成学習アプリ。",
+		descriptionEn: "An English sentence writing learning app built on Cloudflare Workers + D1 edge environment.",
 		url: "https://kayamak.github.io/grid9-english/",
 		emoji: "🐉",
 		tags: ["Cloudflare Workers", "Next.js 15", "Prisma WASM", "NextAuth.js", "Vitest"],
