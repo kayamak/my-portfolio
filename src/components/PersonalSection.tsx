@@ -57,7 +57,7 @@ const projects: Project[] = [
 		titleEn: "BiasQuest",
 		description: "ドラゴンクエスト風RPG UIで認知バイアスを学ぶ学習アプリ。GitHub Pages でホスティング。",
 		descriptionEn: "An English learning app with a Dragon Quest-style RPG UI to learn cognitive biases. Hosted on GitHub Pages.",
-		url: "https://bias-quest.kayama-keiichi.workers.dev/",
+		url: "https://bias-quest.com/",
 		emoji: "🧝‍♀️",
 		tags: ["GitHub Pages", "Next.js 16", "DDD", "Zustand", "Vitest", "Playwright"],
 		appealJa:
@@ -113,13 +113,13 @@ const TechTable: React.FC<{ rows: TechRow[]; language: Language }> = ({ rows, la
 										: "hover:bg-purple-900/20"
 								}`}
 							>
-								<td className={`px-4 py-2 ${isTotal ? "text-yellow-400" : "text-purple-200"} font-medium whitespace-nowrap`}>
+								<td className={`px-4 py-2 ${isTotal ? "text-yellow-400" : "text-purple-200"} whitespace-nowrap font-medium`}>
 									{row.layer}
 								</td>
 								<td className={`px-4 py-2 ${isTotal ? "text-yellow-400" : "text-gray-300"}`}>
 									{row.tech}
 								</td>
-								<td className={`px-4 py-2 whitespace-nowrap ${isTotal ? "text-yellow-400 font-bold" : "text-green-400"}`}>
+								<td className={`whitespace-nowrap px-4 py-2 ${isTotal ? "font-bold text-yellow-400" : "text-green-400"}`}>
 									{row.cost}
 								</td>
 							</tr>
