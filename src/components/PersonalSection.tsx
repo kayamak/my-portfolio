@@ -108,6 +108,31 @@ const projects: Project[] = [
 			{ layer: "Total",            tech: "",                                             cost: "¥0 / 月" },
 		],
 	},
+	{
+		title: "EnTypeQuest",
+		titleEn: "EnTypeQuest",
+		description: "RPGバトルを通じて英語タイピングを練習できる学習アプリ。Cloudflare Workers でホスティング。",
+		descriptionEn: "An English typing practice RPG app where players battle enemies through typing challenges. Hosted on Cloudflare Workers.",
+		url: "https://en-type-quest.kayamak.workers.dev/",
+		emoji: "⚔️",
+		tags: ["Cloudflare Workers", "Next.js 16", "React 19", "Drizzle ORM", "NextAuth.js", "Vitest", "Playwright"],
+		screenshotUrl: "/images/screenshot-entypequest.png",
+		appealJa:
+			"RPGバトル形式の英語タイピング練習アプリを、Next.js 16（App Router）+ React 19 Server Components / Server Actions + Drizzle ORM + Cloudflare D1 で設計・実装。ダメージ計算・XP・レベル進行などのゲームロジックをサーバーサイドで検証し、ドメイン層（純粋関数）を永続化から完全に分離した設計で保守性とテスト容易性を確保。NextAuth.js v5（Google OAuth / JWT）によるステートレス認証、Vitest（6ファイル）+ Playwright E2E（2ファイル）による自動テストと GitHub Actions CI/CD で品質を担保し、一人で設計・実装・運用まで完結させています。",
+		appealEn:
+			"Designed and implemented an RPG-style English typing practice app using Next.js 16 (App Router) + React 19 Server Components / Server Actions + Drizzle ORM + Cloudflare D1. All game logic (damage calculation, XP, level progression) is validated server-side, with a clean domain layer of pure functions fully decoupled from persistence for maintainability and testability. Features stateless authentication via NextAuth.js v5 (Google OAuth / JWT), and quality assurance through Vitest (6 files) + Playwright E2E (2 files) and GitHub Actions CI/CD. Completed the entire design, implementation, and operation solo.",
+		techRows: [
+			{ layer: "Hosting",          tech: "Cloudflare Workers",                          cost: "¥0 (Free Tier)" },
+			{ layer: "Framework",        tech: "Next.js 16 / App Router / React 19",          cost: "¥0" },
+			{ layer: "Database",         tech: "Cloudflare D1 (SQLite)",                      cost: "¥0 (Free Tier)" },
+			{ layer: "ORM",              tech: "Drizzle ORM",                                 cost: "¥0" },
+			{ layer: "Authentication",   tech: "NextAuth.js v5 + Google OAuth + JWT",         cost: "¥0" },
+			{ layer: "Styling",          tech: "Tailwind CSS 4 + shadcn/ui",                  cost: "¥0" },
+			{ layer: "Testing",          tech: "Vitest + Playwright E2E",                     cost: "¥0" },
+			{ layer: "CI/CD",            tech: "GitHub Actions",                              cost: "¥0 (Free Tier)" },
+			{ layer: "Total",            tech: "",                                             cost: "¥0 / 月" },
+		],
+	},
 ];
 
 const TechTable: React.FC<{ rows: TechRow[]; language: Language }> = ({ rows, language }) => {
