@@ -80,6 +80,31 @@ const projects: Project[] = [
 			{ layer: "Total",            tech: "",                                            cost: "¥0 / 月" },
 		],
 	},
+	{
+		title: "Balloon Chat",
+		titleEn: "Balloon Chat",
+		description: "Cloudflare Workers + Durable Objects によるリアルタイムWebSocketチャットアプリ。コミック風UIとAI返信機能を搭載。",
+		descriptionEn: "A real-time WebSocket chat app powered by Cloudflare Workers + Durable Objects, featuring comic-style UI and AI reply functionality.",
+		url: "https://balloon-chat.kayamak.workers.dev/",
+		emoji: "💬",
+		tags: ["Cloudflare Workers", "Durable Objects", "Next.js 16", "WebSocket", "NextAuth.js", "Drizzle ORM", "Vitest", "Playwright"],
+		appealJa:
+			"Cloudflare Workers + Durable Objects でルームごとのWebSocketセッション管理を実現したリアルタイムチャットアプリ。Next.js 16（App Router）+ Drizzle ORM + D1 のフルスタック構成で、NextAuth.js v5（Google OAuth / JWT）による認証を実装。17種のアバター × 9種の感情表現によるコミック風吹き出しUI、AI（ロボット）による文脈を読んだ自動返信機能、レート制限・自動再接続などのリアルタイム通信制御を含め、一人で設計・実装・運用まで完結させています。",
+		appealEn:
+			"A real-time chat application with per-room WebSocket session management via Cloudflare Workers + Durable Objects. Built with a full-stack Next.js 16 (App Router) + Drizzle ORM + D1 architecture, featuring NextAuth.js v5 (Google OAuth / JWT) authentication. Includes comic-style speech bubble UI with 17 avatars × 9 emotion states, context-aware AI auto-reply, rate limiting, and automatic reconnection. Completed the entire design, implementation, and operation solo.",
+		techRows: [
+			{ layer: "Hosting",          tech: "Cloudflare Workers",                          cost: "¥0 (Free Tier)" },
+			{ layer: "Framework",        tech: "Next.js 16 / App Router",                    cost: "¥0" },
+			{ layer: "WebSocket",        tech: "Cloudflare Durable Objects",                  cost: "¥0 (Free Tier)" },
+			{ layer: "Database",         tech: "Cloudflare D1 (SQLite)",                      cost: "¥0 (Free Tier)" },
+			{ layer: "ORM",              tech: "Drizzle ORM",                                 cost: "¥0" },
+			{ layer: "Authentication",   tech: "NextAuth.js v5 + Google OAuth + JWT",         cost: "¥0" },
+			{ layer: "Styling",          tech: "Tailwind CSS 4 + shadcn/ui",                  cost: "¥0" },
+			{ layer: "Testing",          tech: "Vitest + Playwright E2E",                     cost: "¥0" },
+			{ layer: "CI/CD",            tech: "GitHub Actions",                              cost: "¥0 (Free Tier)" },
+			{ layer: "Total",            tech: "",                                             cost: "¥0 / 月" },
+		],
+	},
 ];
 
 const TechTable: React.FC<{ rows: TechRow[]; language: Language }> = ({ rows, language }) => {
