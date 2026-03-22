@@ -23,6 +23,7 @@ interface Project {
 	appealEn: string;
 	techRows: TechRow[];
 	videoUrl?: string;
+	screenshotUrl?: string;
 }
 
 const projects: Project[] = [
@@ -34,6 +35,7 @@ const projects: Project[] = [
 		url: "https://bias-quest.com/",
 		emoji: "🧝‍♀️",
 		tags: ["Cloudflare Workers", "Next.js 15", "Prisma WASM", "NextAuth.js", "Vitest"],
+		screenshotUrl: "/images/screenshot-biasquest.png",
 		appealJa:
 			"運用コスト完全ゼロを実現するため、Cloudflare Workers + D1（SQLite）のエッジ環境上にNext.js（App Router）のフルスタック構成を構築。エッジ特有のI/O制約を Proxy パターンで透過的に解決し、Prisma（WASM対応）+ D1アダプターでORMのエッジ互換を実現しました。Repository / Service / Feature の3層アーキテクチャで保守性を確保し、Vitest による自動テスト（37ファイル）と GitHub Actions CI/CD による品質担保を含め、一人で設計・実装・運用まで完結させています。",
 		appealEn:
@@ -88,6 +90,7 @@ const projects: Project[] = [
 		url: "https://balloon-chat.kayamak.workers.dev/",
 		emoji: "💬",
 		tags: ["Cloudflare Workers", "Durable Objects", "Next.js 16", "WebSocket", "NextAuth.js", "Drizzle ORM", "Vitest", "Playwright"],
+		screenshotUrl: "/images/screenshot-balloonchat.png",
 		appealJa:
 			"Cloudflare Workers + Durable Objects でルームごとのWebSocketセッション管理を実現したリアルタイムチャットアプリ。Next.js 16（App Router）+ Drizzle ORM + D1 のフルスタック構成で、NextAuth.js v5（Google OAuth / JWT）による認証を実装。17種のアバター × 9種の感情表現によるコミック風吹き出しUI、AI（ロボット）による文脈を読んだ自動返信機能、レート制限・自動再接続などのリアルタイム通信制御を含め、一人で設計・実装・運用まで完結させています。",
 		appealEn:
@@ -211,7 +214,7 @@ const ProjectCard: React.FC<{ project: Project; language: Language }> = ({ proje
 			{/* Expandable Detail */}
 			{open && (
 				<div className="border-t border-purple-800/50 px-6 pb-6 pt-4">
-					{project.videoUrl && (
+					{project.videoUrl ? (
 						<>
 							<h4 className="mb-2 text-sm font-bold text-yellow-400">
 								▍{language === "ja" ? "デモ動画" : "Demo Video"}
@@ -226,7 +229,20 @@ const ProjectCard: React.FC<{ project: Project; language: Language }> = ({ proje
 								/>
 							</div>
 						</>
-					)}
+					) : project.screenshotUrl ? (
+						<>
+							<h4 className="mb-2 text-sm font-bold text-yellow-400">
+								▍{language === "ja" ? "デモ画面" : "Demo Screenshot"}
+							</h4>
+							<div className="mb-6 overflow-hidden rounded-lg border border-purple-800/50">
+								<img
+									src={project.screenshotUrl}
+									alt={`${language === "ja" ? project.title : project.titleEn} screenshot`}
+									className="w-full"
+								/>
+							</div>
+						</>
+					) : null}
 					<h4 className="mb-2 text-sm font-bold text-yellow-400">
 						▍{techLabel}
 					</h4>
