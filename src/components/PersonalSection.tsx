@@ -26,12 +26,12 @@ interface Project {
 
 const projects: Project[] = [
 	{
-		title: "GRID９ ENGLISH",
-		titleEn: "GRID9 ENGLISH",
+		title: "BiasQuest",
+		titleEn: "BiasQuest",
 		description: "Cloudflare Workers + D1 のエッジ環境上に構築した英文作成学習アプリ。",
 		descriptionEn: "An English sentence writing learning app built on Cloudflare Workers + D1 edge environment.",
 		url: "https://kayamak.github.io/grid9-english/",
-		emoji: "🐉",
+		emoji: "🧝‍♀️",
 		tags: ["Cloudflare Workers", "Next.js 15", "Prisma WASM", "NextAuth.js", "Vitest"],
 		appealJa:
 			"運用コスト完全ゼロを実現するため、Cloudflare Workers + D1（SQLite）のエッジ環境上にNext.js（App Router）のフルスタック構成を構築。エッジ特有のI/O制約を Proxy パターンで透過的に解決し、Prisma（WASM対応）+ D1アダプターでORMのエッジ互換を実現しました。Repository / Service / Feature の3層アーキテクチャで保守性を確保し、Vitest による自動テスト（37ファイル）と GitHub Actions CI/CD による品質担保を含め、一人で設計・実装・運用まで完結させています。",
@@ -53,12 +53,12 @@ const projects: Project[] = [
 		],
 	},
 	{
-		title: "BiasQuest",
-		titleEn: "BiasQuest",
+		title: "GRID９ ENGLISH",
+		titleEn: "GRID9 ENGLISH",
 		description: "ドラゴンクエスト風RPG UIで認知バイアスを学ぶ学習アプリ。GitHub Pages でホスティング。",
 		descriptionEn: "An English learning app with a Dragon Quest-style RPG UI to learn cognitive biases. Hosted on GitHub Pages.",
 		url: "https://bias-quest.com/",
-		emoji: "🧝‍♀️",
+		emoji: "🐉",
 		tags: ["GitHub Pages", "Next.js 16", "DDD", "Zustand", "Vitest", "Playwright"],
 		appealJa:
 			"ドラゴンクエスト風 RPG UI の英語学習アプリを、Next.js 16（App Router / Static Export）＋ Prisma（libSQL アダプター）＋ DDD（Entity / Value Object / Specification / Repository）で設計・実装。Zustand による状態管理とカスタムフック群でゲームループを構築し、Vitest（49 ファイル）＋ Playwright E2E（4 ファイル）による自動テストと GitHub Actions CI/CD で品質を担保しています。一人で設計・実装・運用まで完結させました。",
