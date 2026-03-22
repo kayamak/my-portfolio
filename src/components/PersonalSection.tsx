@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Language } from "@/types";
+import repositoryPath from "@/lib/repositoryPath";
 
 interface Props {
 	language: Language;
@@ -261,7 +262,7 @@ const ProjectCard: React.FC<{ project: Project; language: Language }> = ({ proje
 							</h4>
 							<div className="mb-6 overflow-hidden rounded-lg border border-purple-800/50">
 								<img
-									src={project.screenshotUrl}
+									src={`${repositoryPath}${project.screenshotUrl}`}
 									alt={`${language === "ja" ? project.title : project.titleEn} screenshot`}
 									className="w-full"
 								/>
