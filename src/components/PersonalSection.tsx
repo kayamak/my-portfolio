@@ -31,7 +31,7 @@ const projects: Project[] = [
 		titleEn: "BiasQuest",
 		description: "Cloudflare Workers + D1 のエッジ環境上に構築した英文作成学習アプリ。",
 		descriptionEn: "An English sentence writing learning app built on Cloudflare Workers + D1 edge environment.",
-		url: "https://kayamak.github.io/grid9-english/",
+		url: "https://bias-quest.com/",
 		emoji: "🧝‍♀️",
 		tags: ["Cloudflare Workers", "Next.js 15", "Prisma WASM", "NextAuth.js", "Vitest"],
 		appealJa:
@@ -58,7 +58,7 @@ const projects: Project[] = [
 		titleEn: "GRID9 ENGLISH",
 		description: "ドラゴンクエスト風RPG UIで認知バイアスを学ぶ学習アプリ。GitHub Pages でホスティング。",
 		descriptionEn: "An English learning app with a Dragon Quest-style RPG UI to learn cognitive biases. Hosted on GitHub Pages.",
-		url: "https://bias-quest.com/",
+		url: "https://kayamak.github.io/grid9-english/",
 		emoji: "🐉",
 		tags: ["GitHub Pages", "Next.js 16", "DDD", "Zustand", "Vitest", "Playwright"],
 		videoUrl: "https://www.youtube.com/watch?v=GpI5rzSYsjU",
