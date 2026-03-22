@@ -22,6 +22,7 @@ interface Project {
 	appealJa: string;
 	appealEn: string;
 	techRows: TechRow[];
+	videoUrl?: string;
 }
 
 const projects: Project[] = [
@@ -60,6 +61,7 @@ const projects: Project[] = [
 		url: "https://bias-quest.com/",
 		emoji: "🐉",
 		tags: ["GitHub Pages", "Next.js 16", "DDD", "Zustand", "Vitest", "Playwright"],
+		videoUrl: "https://www.youtube.com/watch?v=GpI5rzSYsjU",
 		appealJa:
 			"ドラゴンクエスト風 RPG UI の英語学習アプリを、Next.js 16（App Router / Static Export）＋ Prisma（libSQL アダプター）＋ DDD（Entity / Value Object / Specification / Repository）で設計・実装。Zustand による状態管理とカスタムフック群でゲームループを構築し、Vitest（49 ファイル）＋ Playwright E2E（4 ファイル）による自動テストと GitHub Actions CI/CD で品質を担保しています。一人で設計・実装・運用まで完結させました。",
 		appealEn:
@@ -184,6 +186,22 @@ const ProjectCard: React.FC<{ project: Project; language: Language }> = ({ proje
 			{/* Expandable Detail */}
 			{open && (
 				<div className="border-t border-purple-800/50 px-6 pb-6 pt-4">
+					{project.videoUrl && (
+						<>
+							<h4 className="mb-2 text-sm font-bold text-yellow-400">
+								▍{language === "ja" ? "デモ動画" : "Demo Video"}
+							</h4>
+							<div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg">
+								<iframe
+									src={project.videoUrl.replace("watch?v=", "embed/")}
+									title={`${language === "ja" ? project.title : project.titleEn} demo`}
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+									className="absolute inset-0 h-full w-full"
+								/>
+							</div>
+						</>
+					)}
 					<h4 className="mb-2 text-sm font-bold text-yellow-400">
 						▍{techLabel}
 					</h4>
